@@ -53,6 +53,7 @@ public class EmployeeControl {
 	public ResponseEntity<List<Employee>> getallempdtls()
 	{
         List<Employee> listemp=  empserviceinterface.getallempdtls();	
+        System.out.println("getting all employee details");
         return new ResponseEntity<List<Employee>>(listemp, HttpStatus.OK);
 	}
 	
