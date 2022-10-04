@@ -76,6 +76,7 @@ public class EmployeeControl {
 	@DeleteMapping("/deleteempdtls/{emp_id}")
 	public ResponseEntity<Void> DeleteEmpById(@PathVariable("emp_id") Long EmpId)
 	{
+		System.out.println("delete  employee details");
 		empserviceinterface.deleteEmpById(EmpId); 	
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
