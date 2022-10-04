@@ -84,6 +84,7 @@ public class EmployeeControl {
 	@PutMapping("/updateempdtls")
 	public ResponseEntity<Employee> updateempdtls(@RequestBody Employee emp)
 	{
+		System.out.println("update  employee details");
 		Employee empsave=empserviceinterface.addempdtls(emp);
 		return new ResponseEntity<Employee>(empsave,HttpStatus.CREATED);
 	}	
